@@ -1,13 +1,15 @@
 import React from "react";
+import { Footer } from "./style";
+import { ElemtosRodape } from "./style";
 
 export default function Rodape() {
   return (
     <>
-      <footer>
-        <div id="elementosRodapé">
+      <Footer>
+        <ElemtosRodape>
           Cartórios Francisco da Motta | Agradecemos sua visita
-        </div>
-      </footer>
+        </ElemtosRodape>
+      </Footer>
     </>
   );
 }

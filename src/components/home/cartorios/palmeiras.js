@@ -1,7 +1,10 @@
 import React from "react";
 import precos from "../../../assets/img/valores.pdf";
 import Card from "../card/card";
-import { ContainerCorpo } from "./style";  
+import { ContainerCorpo } from "./style";
+import { Valores } from "./style";
+import { RegistroCivil } from "./style";
+import { Titulo } from "./style";
 
 export default function Palmeiras() {
   return (
@@ -14,12 +17,12 @@ export default function Palmeiras() {
 
       <a href={precos} download>
         {" "}
-        <button id="valores"> CONSULTE A TABELA DE PREÇOS </button>
+        <Valores> CONSULTE A TABELA DE PREÇOS </Valores>
       </a>
 
       {/* -- Registro Civil -- */}
-      <div className="registroCivil">
-        <span id="título">{" REGISTRO CIVIL DAS PESSOAS NATURAIS: "}</span>
+      <RegistroCivil>
+        <Titulo>{" REGISTRO CIVIL DAS PESSOAS NATURAIS: "}</Titulo>
         <br />
         <Card name=" Atos acessórios relativos a todos os serviços citados abaixo: averbações de separações, divórcios, óbitos e casamentos " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
@@ -38,9 +41,9 @@ export default function Palmeiras() {
         <Card name=" Registro de óbitos. (Certidão comum ou de inteiro teor) " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
         <br />
-        <span id="título">
+        <Titulo>
           {" TÍTULOS E DOCUMENTOS CIVIS DAS PESSOAS JURÍDICAS: "}
-        </span>
+        </Titulo>
         <br />
         <Card name=" Atos administrativos judiciais " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
@@ -65,9 +68,9 @@ export default function Palmeiras() {
         <Card name=" Registro de sociedade civil " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
         <br />
-        <span id="título">
+        <Titulo>
           {" TABELIONATO DE NOTAS: "}
-        </span>
+        </Titulo>
         <br />
         <Card name=" Abertura de ficha de Assinatura (abrir firma) " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
@@ -108,9 +111,9 @@ export default function Palmeiras() {
         <Card name=" União Estável " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
         <br />
-        <span id="título">
+        <Titulo>
           {" PROTESTO DE TÍTULOS: "}
-        </span>
+        </Titulo>
         <br />
         <Card name=" Cancelamento de Título Protestado " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
@@ -131,9 +134,9 @@ export default function Palmeiras() {
         <Card name=" Receber pagamento de títulos e outros documentos de dívida " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
         <br />
-        <span id="título">
+        <Titulo>
           {" REGISTRO DE IMÓVEIS E HIPOTECAS: "}
-        </span>
+        </Titulo>
         <br />
         <Card name=" Averbações " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
@@ -189,7 +192,7 @@ export default function Palmeiras() {
         <br />
         <Card name=" Usufruto " loc=" Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro " />
         <br />
-      </div>
+      </RegistroCivil>
 
       <section />
     </div>

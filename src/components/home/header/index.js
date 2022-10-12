@@ -65,11 +65,6 @@ export default function Header() {
         {show ? (
           <FormPopup>
             <FormContainer>
-              <button
-                style={{ backgroundColor: "white", borderRadius: "15px" }}
-                onClick={() => setShow(!show)}
-              ></button>
-
               <TxtLogin>LOGIN</TxtLogin>
               <input type="text" placeholder="CPF" name="CPF" required />
               <input type="password" placeholder="SENHA" name="psw" required />

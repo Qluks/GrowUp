@@ -1,26 +1,30 @@
 import React from "react";
 import precos from "../../../assets/img/valores.pdf";
 import Card from "../card/card";
+import { ContainerCorpo } from "./style";
+import { Valores } from "./style";
+import { RegistroCivil } from "./style";
+import { Titulo } from "./style";
 
 export default function Mucuge() {
   return (
     <div>
       {/* -- Serviços -- */}
       <section />
-      <div id="container">
+      <ContainerCorpo>
         <h1>SERVIÇOS</h1>
-      </div>
+      </ContainerCorpo>
 
       <a href={precos} download>
         {" "}
-        <button id="valores"> CONSULTE A TABELA DE PREÇOS </button>
+        <Valores> CONSULTE A TABELA DE PREÇOS </Valores>
       </a>
 
       {/* -- Registro Civil -- */}
-      <div className="registroCivil">
-        <span id="título">
+      <RegistroCivil>
+        <Titulo>
           {" TABELIONATO DE NOTAS: "}
-        </span>
+        </Titulo>
         <br />
         <Card name=" Abertura de ficha de Assinatura (abrir firma) " loc="Localização do cartório: Travessa Rua da Várzea, Galeria Sala 1, Cidade Histórica " />
         <br />
@@ -61,9 +65,9 @@ export default function Mucuge() {
         <Card name=" União Estável " loc="Localização do cartório: Travessa Rua da Várzea, Galeria Sala 1, Cidade Histórica " />
         <br />
         <br />
-        <span id="título">
+        <Titulo>
           {" PROTESTO DE TÍTULOS: "}
-        </span>
+        </Titulo>
         <br />
         <Card name=" Cancelamento de Título Protestado " loc=" Localização do cartório: Travessa Rua da Várzea, Galeria Sala 1, Cidade Histórica " />
         <br />
@@ -83,7 +87,7 @@ export default function Mucuge() {
         <br />
         <Card name=" Receber pagamento de títulos e outros documentos de dívida " loc=" Localização do cartório: Travessa Rua da Várzea, Galeria Sala 1, Cidade Histórica " />
         <br />
-      </div>
+      </RegistroCivil>
 
       <section />
     </div>

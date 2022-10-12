@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Mucuge from "../../cartorios/mucuge";
-import Mapa from "../mapa";
-import Rodape from "../../rodape";
+import Mucuge from "../cartorios/mucuge";
+import Mapa from "../mapa/mapa";
+import Rodape from "../rodape";
 
 class Corpo extends Component {
   render() {

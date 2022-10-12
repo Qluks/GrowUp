@@ -1,45 +1,42 @@
 import React from "react";
+import { MapaStyle } from "./style";
+import { EmailMapa } from "./style";
+import { Email } from "./style";
+import { Mensagem } from "./style";
+import { EnviarEmail } from "./style";
+import { MapaLoc } from "./style";
 
 export default function Mapa(props) {
   return (
     <>
-      <div id="mapa">
-        <div id="email_mapa">
-          <h1 style={{ color: "#050539;", marginLeft: "-7px;" }}>
+      <MapaStyle>
+        <EmailMapa>
+          <h1>
             TEM ALGUMA DÚVIDA?
           </h1>
-          <h2
-            style={{
-              marginLeft: "20px;",
-              marginBottom: "-10px;",
-              color: "#050539;",
-            }}
-          >
+          <h2>
             Fale conosco:
           </h2>
-          <input
+          <Email
             type="email"
-            class="form-control"
             name="email"
-            id="email"
             placeholder="Seu e-mail"
             required=""
           />
           <br />
-          <textarea
+          <Mensagem
             class="form-control"
             name="mensagem"
-            id="mensagem"
             cols="30"
             placeholder="Mensagem"
             rows="4"
             required=""
           >
             {" "}
-          </textarea>
-          <button id="enviarEmail">ENVIAR</button>
-        </div>
-        <div id="mapa1">
+          </Mensagem>
+          <EnviarEmail>ENVIAR</EnviarEmail>
+        </EmailMapa>
+        <MapaLoc>
           <iframe
             title="Localizção do cartório"
             id="mapa2"
@@ -51,8 +48,8 @@ export default function Mapa(props) {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
-      </div>
+        </MapaLoc>
+      </MapaStyle>
     </>
   );
 }

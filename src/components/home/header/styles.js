@@ -75,6 +75,15 @@ export const TxtLogin = styled.div`
 `;
 
 export const ButtonEntrar = styled.button`
-  position: relative;
-  background-color: #4e4992;
+position: relative;
+text-decoration: none;
+background-color: #4e4992;
+color: rgb(255, 255, 255);
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+width: auto;
+margin-bottom: 10px;
+opacity: 0.8;
+border-radius: 5px;
 `;

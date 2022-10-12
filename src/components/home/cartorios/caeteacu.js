@@ -1,24 +1,28 @@
 import React from "react";
 import precos from "../../../assets/img/valores.pdf";
 import Card from "../card/card";
+import { ContainerCorpo } from "./style";
+import { Valores } from "./style";
+import { RegistroCivil } from "./style";
+import { Titulo } from "./style";
 
 export default function Caeteacu() {
   return (
     <div>
       {/* -- Serviços -- */}
       <section />
-      <div id="container">
+      <ContainerCorpo>
         <h1>SERVIÇOS</h1>
-      </div>
+      </ContainerCorpo>
 
       <a href={precos} download>
         {" "}
-        <button id="valores"> CONSULTE A TABELA DE PREÇOS </button>
+        <Valores> CONSULTE A TABELA DE PREÇOS </Valores>
       </a>
 
       {/* -- Registro Civil -- */}
-      <div className="registroCivil">
-        <span id="título">{" REGISTRO CIVIL DAS PESSOAS NATURAIS: "}</span>
+      <RegistroCivil>
+        <Titulo>{" REGISTRO CIVIL DAS PESSOAS NATURAIS: "}</Titulo>
         <br />
         <Card name=" Atos acessórios relativos a todos os serviços citados abaixo: averbações de separações, divórcios, óbitos e casamentos " loc="Localização do cartório: Rua dos Gatos, s/n, Galeria Empório do Vale, Sala 1 " />
         <br />
@@ -37,9 +41,9 @@ export default function Caeteacu() {
         <Card name=" Registro de óbitos. (Certidão comum ou de inteiro teor) " loc="Localização do cartório: Rua dos Gatos, s/n, Galeria Empório do Vale, Sala 1 " />
         <br />
         <br />
-        <span id="título">
+        <Titulo>
           {" TABELIONATO DE NOTAS: "}
-        </span>
+        </Titulo>
         <br />
         <Card name=" Abertura de ficha de Assinatura (abrir firma) " loc="Localização do cartório: Rua dos Gatos, s/n, Galeria Empório do Vale, Sala 1 " />
         <br />
@@ -79,7 +83,7 @@ export default function Caeteacu() {
         <br />
         <Card name=" União Estável " loc="Localização do cartório: Rua dos Gatos, s/n, Galeria Empório do Vale, Sala 1 " />
         <br />
-      </div>
+      </RegistroCivil>
 
       <section />
     </div>

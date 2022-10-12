@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import documentacao from "../../../assets/img/Documentação.pdf";
 import { Link } from "react-router-dom";
+import { Span } from "./style";
+import { ListaFilha } from "./style";
+import { ButtonIniciarAgenda } from "./style";
+import { PopupRegistrar } from "./style";
+import { PopupContainer } from "./style";
+import { CloseModalRegistrar } from "./style";
+import { InputRegistrar } from "./style";
+import { ButtonRegistrar } from "./style";
 
 export default function Card(props) {
   const [show, setShow] = useState(false);
@@ -8,16 +16,16 @@ export default function Card(props) {
   const [showPopupCadastro, setShowPopupCadastro] = useState(false);
 
   function Cadastro() {
-    this.setShowPopup(!showPopup)
-    this.setShowPopupCadastro(!showPopupCadastro)
+    this.setShowPopup(!showPopup);
+    this.setShowPopupCadastro(!showPopupCadastro);
   }
 
   return (
     <>
-      <span onClick={() => setShow(!show)}>{props.name}</span>
+      <Span onClick={() => setShow(!show)}>{props.name}</Span>
       {show ? (
         <ul>
-          <li id="listaFilha">
+          <ListaFilha>
             Documentação necessária:{" "}
             <a
               href={documentacao}
@@ -28,28 +36,22 @@ export default function Card(props) {
               Clique para baixar o arquivo{" "}
             </a>
             <br />
-            <div class="localizaçãoCartório">{props.loc}</div>
-            <div class="horário">Horário de funcionamento: 08 às 14hr</div>
-            <button
-              class="BtIniciarAgen"
-              onClick={() => setShowPopup(!showPopup)}
-            >
+            <div>{props.loc}</div>
+            <div>Horário de funcionamento: 08 às 14hr</div>
+            <ButtonIniciarAgenda onClick={() => setShowPopup(!showPopup)}>
               INICIAR AGENDAMENTO
-            </button>
-          </li>
+            </ButtonIniciarAgenda>
+          </ListaFilha>
         </ul>
       ) : null}
 
       {/* -- Popup de Login -- */}
       {showPopup ? (
-        <div className="popupRegistrar" id="popupRegistrar">
-          <div class="popupContainer">
-            <form class="formRegistrar" method="get" action="" />
+        <PopupRegistrar>
+          <PopupContainer>
+            <form method="get" action="" />
 
-            <button
-              id="closeModalRegistrar"
-              onClick={() => setShowPopup(!showPopup)}
-            />
+            <CloseModalRegistrar onClick={() => setShowPopup(!showPopup)} />
 
             <strong>
               <h2 style={{ color: "white" }}>LOGIN</h2>
@@ -59,7 +61,7 @@ export default function Card(props) {
               a partir do seu perfil
             </h3>
 
-            <div id="inputRegistrar">
+            <InputRegistrar>
               <input id="cpf" type="text" placeholder="  CPF" required />
               <input
                 id="senha"
@@ -67,30 +69,28 @@ export default function Card(props) {
                 placeholder="  SENHA"
                 required
               />
-            </div>
+            </InputRegistrar>
 
-            <div id="btnRegistrar">
+            <ButtonRegistrar>
               <Link to="/usuario">
                 <button id="entrar">ENTRAR</button>
               </Link>
-              <button id="cadastrar" onclick={ Cadastro }>
+              <button id="cadastrar" onclick={Cadastro}>
                 CADASTRAR
               </button>
-            </div>
+            </ButtonRegistrar>
             <form />
-          </div>
-        </div>
+          </PopupContainer>
+        </PopupRegistrar>
       ) : null}
 
       {showPopupCadastro ? (
         <div class="popupCadastrar" id="popupCadastrar">
-          <div class="popupContainer" style={{ marginTop: '90px;' }}>
+          <div class="popupContainer" style={{ marginTop: "90px;" }}>
             <form class="formCadastrar" method="get" action="">
               <div class="formCadastrarTitle">
                 <button
-                  id="closeModalCadastrar"
-                  onClick={setShowPopupCadastro(!showPopupCadastro)}
-                >
+                  id="closeModalCadastrar"onClick={setShowPopupCadastro(!showPopupCadastro)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
