@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
   background-color: #050539;
+  margin-bottom: 500px;
   width: 100%;
   height: 10%;
   position: fixed;
+  display: block;
+  bottom: 172px;
 `;
 
 export const ButtonLogin = styled.button`
@@ -26,7 +29,6 @@ export const LocalizacaoInicio = styled.a`
   font-size: 18px;
   float: right;
   padding-top: 22px;
-  cursor: pointer;
 `;
 
 export const FormPopup = styled.div`
