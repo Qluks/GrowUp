@@ -6,6 +6,7 @@ import { FormPopup } from "./styles";
 import { FormContainer } from "./styles";
 import { TxtLogin } from "./styles";
 import { ButtonEntrar } from "./styles";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -69,12 +70,9 @@ export default function Header() {
               <input type="text" placeholder="CPF" name="CPF" required />
               <input type="password" placeholder="SENHA" name="psw" required />
               <ButtonEntrar>
-                <a
-                  href=" "
-                  style={{ color: "white;", textDecoration: "none;" }}
-                >
-                  ENTRAR
-                </a>
+                <Link to="/administrador">
+                  <button id="btnRegistrar">ENTRAR</button>
+                </Link>
               </ButtonEntrar>
             </FormContainer>
           </FormPopup>
