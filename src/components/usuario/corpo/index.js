@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "./style";
 import { Selecao } from "./style";
 
@@ -10,9 +11,11 @@ export default function Corpo() {
       </Container>
 
       <Selecao>
+        <Link to="/status">
         <button>
           STATUS DE AGENDAMENTO
         </button>
+        </Link>
         <button>
           INICIAR NOVO AGENDAMENTO
         </button>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { HeaderStyle } from "./styles";
 import { ButtonLogin } from "./styles";
 import { LocalizacaoInicio } from "./styles";
@@ -48,20 +49,23 @@ export default function Header() {
             />
           </svg>
         </ButtonLogin>
-        <LocalizacaoInicio
-          href={scrollToBottom}
-          onClick={scrollToBottom}
-          className="scrolllocal"
-        >
-          LOCALIZAÇÃO
-        </LocalizacaoInicio>
-        <LocalizacaoInicio
-          className="scrollToTop"
-          href={scrollToTop}
-          onClick={scrollToTop}
-        >
-          INÍCIO
-        </LocalizacaoInicio>
+
+        <Link to="/">
+          <LocalizacaoInicio
+            href={scrollToBottom}
+            onClick={scrollToBottom}
+            className="scrolllocal"
+          >
+            LOCALIZAÇÃO
+          </LocalizacaoInicio>
+          <LocalizacaoInicio
+            className="scrollToTop"
+            href={scrollToTop}
+            onClick={scrollToTop}
+          >
+            INÍCIO
+          </LocalizacaoInicio>
+        </Link>
         {show ? (
           <FormPopup>
             <FormContainer>

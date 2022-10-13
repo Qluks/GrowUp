@@ -29,6 +29,7 @@ export const LocalizacaoInicio = styled.a`
   font-size: 18px;
   float: right;
   padding-top: 22px;
+  cursor: pointer;
 `;
 
 export const FormPopup = styled.div`
