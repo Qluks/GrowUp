@@ -69,11 +69,9 @@ export default function Header() {
               <TxtLogin>LOGIN</TxtLogin>
               <input type="text" placeholder="CPF" name="CPF" required />
               <input type="password" placeholder="SENHA" name="psw" required />
-              <ButtonEntrar>
                 <Link to="/administrador">
-                  <button id="btnRegistrar">ENTRAR</button>
+                  <ButtonEntrar>ENTRAR</ButtonEntrar>
                 </Link>
-              </ButtonEntrar>
             </FormContainer>
           </FormPopup>
         ) : null}

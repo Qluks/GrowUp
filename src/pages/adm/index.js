@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import LoginSair from "../../components/adm/popups";
 import TabelaAdm from "../../components/adm/tabelaADM";
-import Header from "../../components/home/header";
+import Corpo from "../../components/adm/corpo";
+import Header from "../../components/adm/header";
 import Rodape from "../../components/home/rodape";
 
 class Administrador extends Component {
     render() {
         return (
             <>
-                <Header/><br/>
-                <h1>Olá Administrador!</h1><br/>
+                <Header nomeADM="João"/><br/>
+                <Corpo />
                 <TabelaAdm/>
-                <LoginSair nomeAdm="João"/><br/>
-                <Rodape/><br/>
+                <Rodape/>
             </>
         )
     }

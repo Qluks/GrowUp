@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Span = styled.span`
   font-size: 18px;
   color: #050539;
@@ -106,12 +107,16 @@ export const CloseModalRegistrar = styled.button`
   margin: 0;
   border: 0;
   padding: 0;
+  background-color: #312e59;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  margin-inline-start: 700px;
-  transition: all 150ms;
+  margin-inline-start: 710px;
+
+  svg {
+    color: white;
+  }
 `;
 
 export const InputRegistrar = styled.div`

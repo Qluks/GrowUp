@@ -3,7 +3,7 @@ import Home from "./pages/home/palmeiras";
 import Caeteacu from "./pages/home/caeteacu";
 import Mucuge from "./pages/home/mucuge";
 import Usuario from "./pages/usuario/index";
-import Administrador from "./pages/administrador";
+import Administrador from "./pages/adm";
 import Iraquara from "./pages/home/iraquara";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GlobalStyle from "./pages/home/styles";
