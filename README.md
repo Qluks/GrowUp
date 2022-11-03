@@ -1,53 +1,70 @@
+# Getting Started with Create React App
 
-# Projeto Grow-UP porto digital
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-<div align="center">
-<img src="https://user-images.githubusercontent.com/73246950/184426965-7cfda342-1335-4695-a721-831d1d3899d1.gif" width="700px" />
-</div>
+In the project directory, you can run:
 
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
-# Descrição
-O site foi criado para o administrador de cartórios, Francisco da Motta. Nele, pode-se encontrar endereço de 7 cartórios distintos, meio de contato, início de atendimento e agendamento, além das informações de serviços prestados e documentação necessária para cada um deles.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-# O que pode ser encontrado no site?
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Página Inicial
-- Opção para selecionar cidade de interesse
-- Serviços prestados por cidade
-- Documentação necessária por serviço
-- Informação de Preço para cada serviço
-- Opção para iniciar atendimento do serviço
-- Área para enviar dúvida, ou alguma mensagem, para o cartório de interesse
-- Mapa com a localização exata dos cartórios
-- Opção para fazer Login
+### `npm run eject`
 
-Página de Perfil do Usuário
-- Status de agendamento
-- Informações da data em que o usuário enviou os documentos para início de serviço
-- Início de novo agendamento
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Página de Perfil de Administrador
-- Informação de data em que as documentações foram recebidas 
-- Nome do requerente do serviço
-- Status editável do agendamento
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Ferramentas utilizadas
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-<div style="display: inline_block"><br>
-  <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="Figma" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"> 
-  <img align="center" alt="Java" height="30" width="40" src="https://symbols.getvecta.com/stencil_92/21_postman-icon.c79f00c910.svg">
-  <img align="center" alt="Java" height="30" width="40" src="https://symbols.getvecta.com/stencil_25/70_react.76a8d36b4b.svg"> 
-    <img align="center" alt="Java" height="30" width="40" src="https://symbols.getvecta.com/stencil_25/61_nodejs.124d3fe0e1.svg">
- <!-- <img align="center" alt="Java" height="30" width="40" src="https://cdn-icons.flaticon.com/png/512/4381/premium/4381727.png?token=exp=1639173259~hmac=028f711cb0ee16f3a0a9687dac7b316c"> -->
-  <!--<a href='#' target='_blank'><img  align="right" src='https://i.postimg.cc/bSbkmzHn/image-1.jpg' border='0' right="50px" alt='image-1'/></a>
-</div>-->
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
