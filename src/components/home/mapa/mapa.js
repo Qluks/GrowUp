@@ -25,7 +25,7 @@ export default function Mapa(props) {
           />
           <br />
           <Mensagem
-            className="form-control"
+            class="form-control"
             name="mensagem"
             cols="30"
             placeholder="Mensagem"
@@ -44,9 +44,9 @@ export default function Mapa(props) {
             width={600}
             height={450}
             style={{ border: "0;" }}
-            allowFullScreen=""
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </MapaLoc>
       </MapaStyle>
