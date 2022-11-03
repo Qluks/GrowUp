@@ -32,10 +32,10 @@ export const ButtonCidades = styled.div`
   text-align: center;
 
   button {
-    margin-left: 4.5%;
-    margin-right: 4.5%;
+    margin-left: 2%;
+    margin-right: 2%;
     height: 76px;
-    width: 14%;
+    width: 15%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: none;

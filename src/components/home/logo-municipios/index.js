@@ -35,6 +35,11 @@ class LogoMunicipios extends Component {
             <Link to="/iraquara">
               <button>IRAQUARA</button>
             </Link>
+
+            <Link to="/souto_soares">
+              <button>SOUTO SOARES</button>
+            </Link>
+
           </ButtonCidades>
         </Nav>
       </>

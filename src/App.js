@@ -7,7 +7,8 @@ import Administrador from "./pages/adm";
 import Iraquara from "./pages/home/iraquara";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GlobalStyle from "./pages/home/styles";
-import Servico from "./pages/usuario/servico"
+import Servico from "./pages/usuario/servico";
+import Souto_soares from "./pages/home/souto_soares";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/caeteacu" element={<Caeteacu />} />
+          <Route path="/souto_soares" element={<Souto_soares />} />
           <Route path="/mucuge" element={<Mucuge />} />
           <Route path="/iraquara" element={<Iraquara />} />
           <Route path="/status" element={<Usuario />} />
