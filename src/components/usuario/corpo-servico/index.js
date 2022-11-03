@@ -31,11 +31,11 @@ export default function CorpoServico() {
                 Clique para baixar o arquivo{" "}
               </a>{" "}
               <br />
-              <div class="localizaçãoCartório">
+              <div className="localizaçãoCartório">
                 {" "}
                 Localização do cartório: Praça Dr. José Gonçalves, n° 11, centro{" "}
               </div>
-              <div class="horário">Horário de funcionamento: 08 às 14hr</div>
+              <div className="horário">Horário de funcionamento: 08 às 14hr</div>
               <ButtonIniciarAgendamento
                 style={{ opacity: "0.2;", cursor: "default;" }}
               >
