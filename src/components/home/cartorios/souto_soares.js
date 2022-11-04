@@ -6,7 +6,7 @@ import { Valores } from "./style";
 import { RegistroCivil } from "./style";
 import { Titulo } from "./style";
 
-export default function Souto_soares() {
+export default function Soutosoares() {
   return (
     <div>
       {/* -- Serviços -- */}
