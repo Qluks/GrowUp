@@ -43,6 +43,7 @@ export const ButtonIniciarAgenda = styled.button`
 `;
 
 export const PopupRegistrar = styled.div`
+  align-items: center;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -63,7 +64,7 @@ export const PopupContainer = styled.div`
   align-items: center;
   font-family: "LexendDeca-Regular";
   color: rgb(255, 255, 255);
-  position: fixed;
+  position: sticky;
   left: 23%;
   width: 50%;
 
@@ -120,7 +121,7 @@ export const CloseModalRegistrar = styled.button`
 `;
 
 export const InputRegistrar = styled.div`
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 
