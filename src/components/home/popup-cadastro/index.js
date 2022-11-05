@@ -15,6 +15,7 @@ export default function PopupCadastro(props) {
     cpfUsuario: "",
     emailUsuario: "",
     senhaUsuario: "",
+    numeroUsuario: "",
   });
   
   const {user, setUser} = useUser();
@@ -88,6 +89,7 @@ export default function PopupCadastro(props) {
               <input
                 id="telefone"
                 type="tel"
+                name="numeroUsuario"
                 placeholder="Telefone"
                 required
                 onChange={handleChange}
