@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   PopupContainer,
   CloseModalRegistrar,
@@ -7,14 +7,43 @@ import {
   PopupRegistrar,
   InputRegistrar,
 } from "../card/style";
+import axios from "axios";
 
 export default function PopupCadastro(props) {
+  const [cadastro, setCadastro] = useState({
+    nomeUsuario: "",
+    cpfUsuario: "",
+    emailUsuario: "",
+    senhaUsuario: "",
+  });
+  let navigate = useNavigate();
+  function handleChange(event) {
+    setCadastro({ ...cadastro, [event.target.name]: event.target.value });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    axios
+      .post("http://localhost:8080/usuario/create/", cadastro)
+      .catch(function (error) {
+        if (error.message === "Network Error") {
+          console.log("Erro no servidor.");
+          return;
+        }
+        console.log("Erro ao tentar criar usuário.");
+        console.log(error.message);
+      })
+      .then(() => {
+        navigate("/usuario");
+      });
+  }
+
   return (
     <>
       {props.showPopup ? (
         <PopupRegistrar>
           <PopupContainer>
-            <form method="get" action="" />
+            <form onSubmit={handleSubmit} />
             <CloseModalRegistrar onClick={props.setShowPopup}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,53 +60,65 @@ export default function PopupCadastro(props) {
             <strong>
               <h2>CADASTRAR-SE</h2>
             </strong>
-            <h3>
-              Insira os dados corretamente para a realização do cadastro
-            </h3>
+            <h3>Insira os dados corretamente para a realização do cadastro</h3>
 
             <InputRegistrar>
               <input
-                id="cpf"
+                id="nome"
                 type="text"
+                name="nomeUsuario"
                 placeholder="Nome completo"
                 required
+                onChange={handleChange}
               />
               <input
-                id="cpf"
+                id="email"
                 type="email"
+                name="emailUsuario"
                 placeholder="Email"
                 required
+                onChange={handleChange}
               />
               <input
-                id="cpf"
+                id="telefone"
                 type="tel"
                 placeholder="Telefone"
                 required
+                onChange={handleChange}
               />
               <input
                 id="cpf"
                 type="text"
+                name="cpfUsuario"
                 placeholder="CPF"
                 required
+                onChange={handleChange}
               />
               <input
-                id="cpf"
+                id="senha"
                 type="password"
+                name="senhaUsuario"
                 placeholder="Senha"
                 required
+                onChange={handleChange}
               />
               <input
-                id="cpf"
+                id="confirmSenha"
                 type="password"
                 placeholder="Confirmar Senha"
                 required
+                onChange={handleChange}
               />
             </InputRegistrar>
 
             <ButtonRegistrar>
-              <Link to="/usuario">
-                <button id="entrar">REALIZAR CADASTRO</button>
-              </Link>
+              <input
+                id="submit"
+                type="submit"
+                value="REALIZAR CADASTRO"
+                className="btn btn-success"
+                onClick={handleSubmit}
+              />
             </ButtonRegistrar>
             <form />
           </PopupContainer>
