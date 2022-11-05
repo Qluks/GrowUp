@@ -9,10 +9,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GlobalStyle from "./pages/home/styles";
 import Servico from "./pages/usuario/servico";
 import Soutosoares from "./pages/home/souto_soares";
+import { UserProvider } from "./context/UserContext";
 
 function App() {
   return (
-    <>
+    <UserProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +27,7 @@ function App() {
         </Routes>
         <GlobalStyle />
       </Router>
-    </>
+    </UserProvider>
   );
 }
 

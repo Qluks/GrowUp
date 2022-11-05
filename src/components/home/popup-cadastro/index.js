@@ -8,7 +8,7 @@ import {
   InputRegistrar,
 } from "../card/style";
 import axios from "axios";
-
+import { useUser } from "../../../context/UserContext";
 export default function PopupCadastro(props) {
   const [cadastro, setCadastro] = useState({
     nomeUsuario: "",
@@ -16,13 +16,18 @@ export default function PopupCadastro(props) {
     emailUsuario: "",
     senhaUsuario: "",
   });
+  
+  const {user, setUser} = useUser();
   let navigate = useNavigate();
+
+
   function handleChange(event) {
     setCadastro({ ...cadastro, [event.target.name]: event.target.value });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
+    console.log(user)
     axios
       .post("http://localhost:8080/usuario/create/", cadastro)
       .catch(function (error) {
@@ -33,7 +38,8 @@ export default function PopupCadastro(props) {
         console.log("Erro ao tentar criar usuário.");
         console.log(error.message);
       })
-      .then(() => {
+      .then((response) => {
+        setUser(response.data)
         navigate("/usuario");
       });
   }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import documentacao from "../../../assets/img/Documentação.pdf";
 import PopupCadastro from "../popup-cadastro";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Span } from "./style";
 import { ListaFilha } from "./style";
 import { ButtonIniciarAgenda } from "./style";
@@ -10,11 +10,54 @@ import { PopupContainer } from "./style";
 import { CloseModalRegistrar } from "./style";
 import { InputRegistrar } from "./style";
 import { ButtonRegistrar } from "./style";
+import { useUser } from "../../../context/UserContext";
+import axios from "axios";
 
 export default function Card(props) {
   const [show, setShow] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showPopupCadastro, setShowPopupCadastro] = useState(false);
+  const [login, setLogin] = useState({
+    cpfUsuario: "",
+    senhaUsuario: "",
+  });
+
+  const { user, setUser } = useUser();
+
+  let navigate = useNavigate();
+
+  function handleChange(event) {
+    setLogin({ ...login, [event.target.name]: event.target.value });
+  }
+
+  async function handleLogin() {
+    let data;
+    await axios
+      .get("http://localhost:8080/usuario/list/")
+      .catch(function (error) {
+        if (error.message === "Network Error") {
+          console.log("Erro no servidor.");
+          return;
+        }
+        console.log(error.message);
+      })
+      .then((response) => {
+        data = response.data;
+        data.forEach((user) => {
+          if (
+            user.cpfUsuario === login.cpfUsuario &&
+            user.senhaUsuario === login.senhaUsuario
+          ) {
+            setUser(user);
+            navigate("/usuario");
+          }
+        });
+      });
+    console.log(user)
+    if (!user) {
+      // alert("Usuario não encontrado. Tente Novamente");
+    }
+  }
 
   return (
     <>
@@ -47,7 +90,15 @@ export default function Card(props) {
             <br />
             <div>{props.loc}</div>
             <div>Horário de funcionamento: 08 às 14hr</div>
-            <ButtonIniciarAgenda onClick={() => setShowPopup(!showPopup)}>
+            <ButtonIniciarAgenda
+              onClick={() => {
+                if (!user) {
+                  setShowPopup(!showPopup);
+                  return;
+                }
+                navigate("/usuario");
+              }}
+            >
               INICIAR AGENDAMENTO
             </ButtonIniciarAgenda>
           </ListaFilha>
@@ -81,20 +132,29 @@ export default function Card(props) {
             </h3>
 
             <InputRegistrar>
-              <input id="cpf" type="text" placeholder="  CPF" required />
+              <input
+                id="cpf"
+                type="text"
+                placeholder="  CPF"
+                name="cpfUsuario"
+                onChange={handleChange}
+                required
+              />
               <input
                 id="senha"
                 type="password"
+                name="senhaUsuario"
                 placeholder="  SENHA"
+                onChange={handleChange}
                 required
               />
             </InputRegistrar>
 
             <ButtonRegistrar>
-              <Link to="/usuario">
-                <button id="entrar">ENTRAR</button>
-              </Link>
-              <button onClick={ () => setShowPopupCadastro(!showPopupCadastro) }>
+              <button id="entrar" onClick={handleLogin}>
+                ENTRAR222
+              </button>
+              <button onClick={() => setShowPopupCadastro(!showPopupCadastro)}>
                 CADASTRAR
               </button>
             </ButtonRegistrar>
@@ -102,7 +162,10 @@ export default function Card(props) {
           </PopupContainer>
         </PopupRegistrar>
       ) : null}
-      <PopupCadastro showPopup={ showPopupCadastro } setShowPopup={ () => setShowPopupCadastro(!showPopupCadastro) }/>
+      <PopupCadastro
+        showPopup={showPopupCadastro}
+        setShowPopup={() => setShowPopupCadastro(!showPopupCadastro)}
+      />
     </>
   );
 }
