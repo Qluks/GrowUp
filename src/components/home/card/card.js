@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import documentacao from "../../../assets/img/Documentação.pdf";
 import PopupCadastro from "../popup-cadastro";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Span } from "./style";
 import { ListaFilha } from "./style";
 import { ButtonIniciarAgenda } from "./style";
