@@ -10,8 +10,15 @@ import GlobalStyle from "./pages/home/styles";
 import Servico from "./pages/usuario/servico";
 import Soutosoares from "./pages/home/souto_soares";
 import { UserProvider } from "./context/UserContext";
+import { BlipChat } from "blip-chat-widget";
 
 function App() {
+  new BlipChat()
+    .withAppKey('bWt0enhrcmt3ZmZvZTZ3NXBvZDJ0MmhjcTo0MjEyN2JiNC1iZDIxLTQwODktOGQ1My02ZDEyNzc5MmNkM2Q=')
+    .withButton({ "color": "#050539", "icon": "" })
+    .withCustomCommonUrl('https://thais-tawany-rufino-da-silva-9u0ex.chat.blip.ai/')
+    .build();
+  
   return (
     <UserProvider>
       <Router>
