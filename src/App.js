@@ -18,7 +18,7 @@ function App() {
     .withButton({ "color": "#050539", "icon": "" })
     .withCustomCommonUrl('https://thais-tawany-rufino-da-silva-9u0ex.chat.blip.ai/')
     .build();
-  
+    
   return (
     <UserProvider>
       <Router>
@@ -34,6 +34,7 @@ function App() {
         </Routes>
         <GlobalStyle />
       </Router>
+
     </UserProvider>
   );
 }
