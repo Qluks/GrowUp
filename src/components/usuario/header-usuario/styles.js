@@ -7,7 +7,7 @@ export const HeaderStyle = styled.header`
   height: 10%;
   position: fixed;
   display: block;
-  bottom: 172px;
+  top: 0px;
 `;
 
 export const ButtonLogin = styled.button`

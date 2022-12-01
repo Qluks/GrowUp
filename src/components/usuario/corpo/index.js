@@ -18,9 +18,11 @@ export default function Corpo() {
           STATUS DE AGENDAMENTO
         </button>
         </Link>
+        <Link to="/usuario">
         <button>
           INICIAR NOVO AGENDAMENTO
         </button>
+        </Link>
       </Selecao>
     </>
   );

@@ -59,7 +59,7 @@ export default function CorpoServico() {
               CPF
             </ButtonSelecionar2>{" "}
             <ButtonSelecionar2>CERTIDÃO</ButtonSelecionar2>{" "}
-            <ButtonSelecionar2>RG</ButtonSelecionar2> <input type="file" />
+            <ButtonSelecionar2>RG</ButtonSelecionar2> <input id="docSelecionado" type="file" />
             <br />
             <br />
             <br />
