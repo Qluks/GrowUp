@@ -152,7 +152,7 @@ export default function Card(props) {
 
             <ButtonRegistrar>
               <button id="entrar" onClick={handleLogin}>
-                ENTRAR222
+                ENTRAR
               </button>
               <button onClick={() => setShowPopupCadastro(!showPopupCadastro)}>
                 CADASTRAR
