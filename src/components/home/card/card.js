@@ -33,7 +33,7 @@ export default function Card(props) {
   async function handleLogin() {
     let data;
     await axios
-      .get("http://localhost:8080/usuario/list/")
+      .get("https://spring-mulungu-mulungu.azuremicroservices.io/usuario/list/")
       .catch(function (error) {
         if (error.message === "Network Error") {
           console.log("Erro no servidor.");

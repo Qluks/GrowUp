@@ -11,6 +11,7 @@ import { ButtonEnviar } from "./style";
 import { Input } from "./style";
 
 export default function CorpoServico() {
+  
   return (
     <>
       <Section>
@@ -59,7 +60,8 @@ export default function CorpoServico() {
               CPF
             </ButtonSelecionar2>{" "}
             <ButtonSelecionar2>CERTIDÃO</ButtonSelecionar2>{" "}
-            <ButtonSelecionar2>RG</ButtonSelecionar2> <input id="docSelecionado" type="file" />
+            <ButtonSelecionar2>RG</ButtonSelecionar2> 
+            <input id="docSelecionado" type="file" />
             <br />
             <br />
             <br />

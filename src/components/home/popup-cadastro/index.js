@@ -30,7 +30,7 @@ export default function PopupCadastro(props) {
     event.preventDefault();
     console.log(user)
     axios
-      .post("http://localhost:8080/usuario/create/", cadastro)
+      .post("https://spring-mulungu-mulungu.azuremicroservices.io/usuario/create/", cadastro)
       .catch(function (error) {
         if (error.message === "Network Error") {
           console.log("Erro no servidor.");
